@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mr Deabek — Home</title>
+</head>
+<body>
+  <h1>Mr Deabek Delivery</h1>
+  <p class="small">Sign up or log in</p>
+
+  <section aria-labelledby="signup-heading">
+    <h2 id="signup-heading">Sign Up</h2>
+    <form id="signup" autocomplete="on">
+      <label for="name">Your Name</label><br>
+      <input id="name" name="name" type="text" required><br>
+
+      <label for="address">Address</label><br>
+      <input id="address" name="address" type="text"><br>
+
+      <label for="number">Phone</label><br>
+      <input id="number" name="number" type="tel"><br>
+
+      <label for="email">Email</label><br>
+      <input id="email" name="email" type="email" required><br>
+
+      <label for="password">Password</label><br>
+      <input id="password" name="password" type="password" required><br>
+
+      <div style="margin-top:10px">
+        <button type="submit">Sign Up</button><br><hr>
+      </div>
+    </form>
+    <div id="signupMsg" class="msg"></div>
+  </section>
+
+  <section aria-labelledby="login-heading">
+    <h2 id="login-heading">Log In</h2>
+    <form id="login" autocomplete="on">
+      <label for="loginEmail">Email</label><br>
+      <input id="loginEmail" name="loginEmail" type="email" required><br>
+
+      <label for="loginPassword">Password</label><br>
+      <input id="loginPassword" name="loginPassword" type="password" required>
+
+      <div style="margin-top:10px">
+        <button type="submit">Log In</button>
+      </div>
+    </form>
+    <div id="loginMsg" class="msg"></div>
+  </section>
+
+  <p><a href="menu.html">Go to Menu</a></p>
+
+  <script src="app.js"></script>
+</body>
+</html>

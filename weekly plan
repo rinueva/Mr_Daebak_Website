@@ -1,0 +1,267 @@
+Day 6 – Cart & flexible changes
+
+Goal: Cart system that supports add/remove/change.
+
+On cart.html:
+
+Show items user added:
+
+Dinner name
+
+Chosen style
+
+Quantity (with + / – buttons)
+
+Extra options (champagne bottles, baguette, coffee…)
+
+Add logic:
+
+Add to cart (from menu) saves to localStorage (e.g. cart key)
+
+On cart.html, read cart from localStorage
+
+Implement:
+
+Increase/decrease quantity
+
+Remove item
+
+Implement Champagne rule:
+
+Champagne Feast dinner must have grand or deluxe
+
+Calculate total price automatically
+
+Assignment:
+👉 You can:
+
+Add items from menu.html
+
+See them in cart.html
+
+Change quantity and see total update
+
+If something doesn’t work, send your JS code.
+
+Day 7 – Checkout & save order
+
+Goal: Complete the ordering flow.
+
+On checkout.html:
+
+Show summary of cart
+
+Add form fields:
+
+Delivery address (default = user’s saved address)
+
+Delivery time
+
+Credit card number (just input)
+
+On “Place Order” button:
+
+Create an order object:
+
+id (timestamp)
+
+userEmail
+
+items (cart items)
+
+totalPrice
+
+orderTime (new Date())
+
+deliveryTime
+
+deliveryAddress
+
+status = "Ordered"
+
+Save into localStorage array orders
+
+Clear cart
+
+Show simple success message + link to MyPage
+
+Assignment:
+👉 You can now:
+
+Go from menu → cart → checkout → place order
+
+After placing, confirm orders appears in devtools (or just trust).
+
+🗓 Week 2 – History, staff page, polish, extras
+Day 8 – MyPage: order history
+
+Goal: Show previous orders for the logged-in user.
+
+On mypage.html:
+
+Read currentUser and orders from localStorage
+
+Filter orders with order.userEmail === currentUser.email
+
+Show them in a table or list with:
+
+Order time
+
+Dinner names (summary)
+
+Total price
+
+Delivery time
+
+Delivery address
+
+Status
+
+Assignment:
+👉 When logged in, MyPage shows your past orders sorted newest → oldest.
+
+Day 9 – Reorder & modification
+
+Goal: Allow quick reordering.
+
+On each order in MyPage:
+
+Add a button “Order again / Modify”
+
+When clicked:
+
+Copy that order’s items into localStorage.cart
+
+window.location = "cart.html"
+
+User can then modify quantities or items and go to checkout again.
+
+Assignment:
+👉 You can:
+
+Choose an old order → click “Order again” → see the items in cart and edit them.
+
+Day 10 – Staff interface
+
+Goal: Basic staff control.
+
+On staff.html:
+
+No login system for staff (to keep it simple) or maybe a simple password like admin123
+
+Read all orders from localStorage
+
+Show:
+
+Order id
+
+Customer name & address
+
+Items
+
+Delivery time
+
+Current status
+
+For each order, make a dropdown:
+
+Ordered, Preparing, Delivering, Delivered
+
+On change, update the order in localStorage
+
+Assignment:
+👉 You can open staff.html and change the status of each order.
+
+Day 11 – Style & usability
+
+Goal: Make it look like a real website.
+
+Use style.css to:
+
+Give a consistent color theme (ex: dark red + gold for “fancy dinner”)
+
+Style buttons, forms, and tables
+
+Add hover effects
+
+Make sure navigation between pages is easy:
+
+Header links
+
+“Continue” buttons (Menu → Cart → Checkout → MyPage)
+
+Assignment:
+👉 Send me a screenshot collage of all pages so we can check if it looks consistent.
+
+Day 12 – Voice ordering (simple version)
+
+Goal: Show at least some voice functionality or UI.
+
+Option A (simple, no real speech recognition):
+
+Add a “Voice Order (음성 주문)” button on menu or cart page.
+
+When clicked, show a modal or text:
+“In a full system, you could speak your order here. For this prototype, click buttons below to autofill sample order.”
+
+Provide a sample button like “Sample Valentine Dinner order” that fills the cart.
+
+Option B (harder, optional):
+
+Use Chrome’s Web Speech API (window.SpeechRecognition) to recognize voice and fill one input (like address or name of menu).
+
+Only do this if you feel comfortable with JS.
+
+Assignment:
+👉 At least have a visible voice order UI and some basic behavior (even if it’s simulated).
+
+Day 13 – Testing & fixing
+
+Goal: Make sure the main flows work without bugs.
+
+Test these:
+
+New user sign up → login → order dinner → checkout → MyPage → Staff page
+
+Change order status on staff page → check if MyPage shows updated status
+
+Re-order from history
+
+Invalid login (wrong password) shows an error
+
+Champagne dinner cannot select simple style
+
+Fix as many issues as you can.
+
+Assignment:
+👉 Make a small list:
+
+“Things working”
+
+“Things not working / limitations”
+
+Day 14 – Final polish & report
+
+Goal: Prepare for presentation / submission.
+
+Check text: correct Korean/English labels on buttons
+
+Add slogan on home page:
+
+“특별한 날에 집에서 편안히 보내면서
+당신의 남편, 아내, 엄마, 아버지, 또는 친구를 감동시켜라.”
+
+(If your course needs it) Write a short 1–2 page explanation:
+
+What features your site supports
+
+How customer interface works
+
+How staff interface works
+
+How you implemented flexible order changes
+
+What is missing (real payment, real DB, security, etc.)
+
+Assignment:
+👉 Make final zip of the project folder + your explanation document.
